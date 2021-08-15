@@ -108,7 +108,7 @@ IncludeBlocks: Preserve
 # アクセス指定子をインデントするか
 #IndentAccessModifiers: false # version12にない
 # case後のブロックをインデントするか
-IndentCaseBlocks: true
+IndentCaseBlocks: false
 # caseラベルをインデントするか
 IndentCaseLabels: true
 # externブロックをインデントするか
