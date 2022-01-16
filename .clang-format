@@ -1,191 +1,110 @@
-# アクセス指定子のインデントの幅
-AccessModifierOffset: -4
-# ()の後のインデントをどうするか
-AlignAfterOpenBracket: AlwaysBreak
-# 構造体の配列をアラインするか
-#AlignArrayOfStructures: None # version12にない
-# 変数の定義の=を揃える
-AlignConsecutiveAssignments: false 
-# bitfieldの位置を揃える
-AlignConsecutiveBitFields: false 
-# 変数の型と名前の間を揃える
-AlignConsecutiveDeclarations: false 
-# マクロの名前と値の間を揃える
-AlignConsecutiveMacros: false 
-# マクロの改行(\)を揃える
-AlignEscapedNewlines: false 
-# 改行後の演算子の位置を揃える
-AlignOperands: false 
-# コメントの位置を揃える
-AlignTrailingComments: false 
-# BinPackArgumentsがfalseの時に、次の行に全ての引数をまとめる
-AllowAllArgumentsOnNextLine: false 
-# ConstructorInitializerAllOnOneLineOrOnePerLineがfalseの時に
-# コンストラクタのメンバ初期化を一行にまとめる
-AllowAllConstructorInitializersOnNextLine: false
-# BinPackParametersがfalseの時に、次の行に全ての引数をまとめる
-AllowAllParametersOfDeclarationOnNextLine: false
-# 短いブロックを一行にまとめるか
-AllowShortBlocksOnASingleLine: Never
-# 短いswitchのcaseラベルを一行にまとめるか
-AllowShortCaseLabelsOnASingleLine: true
-# 短いenumを一行にまとめるか
-AllowShortEnumsOnASingleLine: false
-# 短い関数を一行にまとめるか
-AllowShortFunctionsOnASingleLine: None
-# 短いif文を一行にまとめるか
-AllowShortIfStatementsOnASingleLine: Never
-# 短いラムダ式を一行にまとめるか
-AllowShortLambdasOnASingleLine: None
-# 短いループ分を一行にまとめるか
-AllowShortLoopsOnASingleLine: false
-# 戻り値の型の後に改行するか
-AlwaysBreakAfterDefinitionReturnType: None
-AlwaysBreakAfterReturnType: None
-# 複数行の文字列の前に改行をいれるか
-AlwaysBreakBeforeMultilineStrings: false
-# template宣言の後に改行するか
-AlwaysBreakTemplateDeclarations: Yes
-# falseだと引数が複数行の時に引数ごとに改行される
-BinPackArguments: false
-BinPackParameters: false
-# bitfieldの空白
-#BitFieldColonSpacing: Both # VisualStudioが認識しない
-# 改行の設定 CustomにするとBraceWrappingで個別に設定できる
+# インデント幅
+IndentWidth: 4
+
+# タブを使用するか
+UseTab: Always
+# タブ幅
+TabWidth: 4
+
+# columnの制限
+ColumnLimit: 0
+
+# 改行設定
 BreakBeforeBraces: Custom
 BraceWrapping:
   AfterCaseLabel: true
   AfterClass: true
   AfterControlStatement: true
+  AfterStruct: true
   AfterEnum: true
   AfterFunction: true
-  AfterNamespace: false
-  AfterStruct: true
-  AfterUnion: true
-  AfterExternBlock: false
-  BeforeCatch: true
   BeforeElse: true
   BeforeLambdaBody: true
-  BeforeWhile: true # do-while
-  IndentBraces: false # 改行した波かっこをインデント
-  SplitEmptyFunction: true # 空の関数のかっこを改行するか
-  SplitEmptyRecord: true # 空のクラスとか構造体とかを改行するか
-  SplitEmptyNamespace: false # 空の名前空間を改行するか
-# 演算子のどこで改行するか
-BreakBeforeBinaryOperators: None #None, All
-# 三項演算子の改行位置
-BreakBeforeTernaryOperators: true
-# コンストラクタのメンバ初期化の改行位置
-BreakConstructorInitializers: BeforeComma
-# クラスの継承のベースクラスの改行位置
-BreakInheritanceList: BeforeComma
-# 文字列リテラルの改行を許可するか
-BreakStringLiterals: false
-# 列の制限
-ColumnLimit: 0 # つまり改行を勝手にしない
-# namespace を同じ行にまとめてもいいか
-CompactNamespaces: false
-# コンストラクタの初期化を一行にまとめるかそれぞれの行にするか
-ConstructorInitializerAllOnOneLineOrOnePerLine: false
-# {}をC++11に最適な形式にする
-Cpp11BracedListStyle: false
-# ファイルを解析してもっとも使われている改行コードを検出する
-DeriveLineEnding: false
-# ファイルを解析して*, &のアライメントを検出する
-DerivePointerAlignment: false
-# フォーマットを無効にする
-DisableFormat: false
-# アクセス指定子の後の空行をどうするか
-#EmptyLineAfterAccessModifier: Always # 常に空行を入れる # version12にない
-# アクセス指定子の前の空行をどうするか
-#EmptyLineBeforeAccessModifier: Always #version12にない
-# binpackを検出するか(experimental)
-ExperimentalAutoDetectBinPacking: true
-# 名前空間の終わりのかっこにコメントを追加する
-FixNamespaceComments: true
+  BeforeCatch: true
+  BeforeWhile: true
+
+# includeのソート
+SortIncludes: CaseInsensitive
 # includeブロックのソートをどうするか
 IncludeBlocks: Preserve
-# アクセス指定子をインデントするか
-#IndentAccessModifiers: false # version12にない
-# case後のブロックをインデントするか
+
+#################################################
+# preprocessor
+
+# プリプロセッサ命令をインデントするか
+IndentPPDirectives: AfterHash # ハッシュ後をインデント
+
+#################################################
+# control statement
+
+# switchのcaseの中のブロックをインデントするか
 IndentCaseBlocks: false
-# caseラベルをインデントするか
+# switchのcaseラベルをインデントするか
 IndentCaseLabels: true
-# externブロックをインデントするか
-IndentExternBlock: NoIndent
-# gotoラベルをインデントするか
+
+# gotoのラベルをインデントするか
 IndentGotoLabels: false
-# プリプロセス命令をインデントするか
-IndentPPDirectives: AfterHash
-# インデントの幅
-IndentWidth: 4
-# 関数の定義で戻り値の型の後に改行された場合にインデントするか
-IndentWrappedFunctionNames: false
-# 配列とかの最後の要素に,をつけるか
-InsertTrailingCommas: Wrapped
-# ブロック先頭の空行を保持するか
-KeepEmptyLinesAtTheStartOfBlocks: false
-# ラムダ式のボディをインデントするか
-#LambdaBodyIndentation: Signature # version12にない
-# 空行を最大何行そのままにするか
-MaxEmptyLinesToKeep: 2
-# 名前空間をインデントするか
-NamespaceIndentation: None
-# ポインタと参照の配置位置
+
+#################################################
+# variables
+
+# ポインタと参照の位置
 PointerAlignment: Left
-# コメントもフォーマットするか
-ReflowComments: false
-# インクルードのソート方法
-SortIncludes: true
-# using宣言をソートするか
-SortUsingDeclarations: false
-# Cスタイルのキャストの後に空白を入れるか
-SpaceAfterCStyleCast: false
-# !の後に空白をいれるか
-SpaceAfterLogicalNot: false
-# templateキーワードの後に空白を入れるか
-SpaceAfterTemplateKeyword: false
-# ポインタ修飾子の前後にスペースいれるか
-#SpaceAroundPointerQualifiers: Default # version12にない まあこれはいらないかも
-# 代入演算子の前に空白を入れるか
-SpaceBeforeAssignmentOperators: true
-# caseのコロンの前に空白を入れるか
-#SpaceBeforeCaseColon: false # version12にない
-# C++11の初期化リストの前に空白をいれるか
-SpaceBeforeCpp11BracedList: false
-# コンストラクタのメンバ初期化リストのコロンの前に空白を入れるか
-SpaceBeforeCtorInitializerColon: true
-# 継承のコロンの前に空白を入れるか
-SpaceBeforeInheritanceColon: true
-# ()の前に空白をいれるか
-SpaceBeforeParens: Never
-# range-based for のコロンの前に空白を入れるか
-SpaceBeforeRangeBasedForLoopColon: true
-# []の前に空白をいれるか
-SpaceBeforeSquareBrackets: false
-# 空白のブロックにスペースをいれるか
-SpaceInEmptyBlock: false
-# 空の()にスペースをいれるか
-SpaceInEmptyParentheses: false
-# 末尾コメント(//)の前に何個空白をいれるか
-SpacesBeforeTrailingComments: 1
-# <>の中に空白を入れるか
-SpacesInAngles: true
-# Cスタイルキャストの中に空白を入れるか
-SpacesInCStyleCastParentheses: true
-# 条件文の中に空白をいれるか
-SpacesInConditionalStatement: true
-# コンテナリテラル(配列とか)の中に空白をいれるか(C++の設定ではない？)
-SpacesInContainerLiterals: true
-# ()の中に空白を入れるか
-SpacesInParentheses: true
-# []の中に空白を入れるか
-SpacesInSquareBrackets: true
-# C++言語をどの標準に準拠するか(C++03, C++11とか)
-Standard: Auto
-# タブ幅
-TabWidth: 4
-# LFの代わりにCRLF使用するか
-UseCRLF: false
-# タブを使用するか
-UseTab: Always
+
+#################################################
+# function
+
+# 短い関数を一行にまとめるか
+AllowShortFunctionsOnASingleLine: None
+
+#################################################
+# namespace
+
+# 名前空間の終わりのかっこにコメントを追加する
+FixNamespaceComments: true
+# 何行で終わりかっこにコメントを追加するか
+ShortNamespaceLines: 0
+
+#################################################
+# class
+
+# アクセス指定子をインデントするか
+IndentAccessModifiers: false
+# アクセス指定子のインデントの幅
+AccessModifierOffset: -4
+
+# コンストラクタのメンバ初期化の改行位置
+BreakConstructorInitializers: BeforeComma
+
+# コンストラクタの初期化を一行にまとめるかそれぞれの行にするか
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
+
+# クラスの継承のベースクラスの改行位置
+BreakInheritanceList: BeforeComma
+
+#################################################
+# operators
+
+# 演算子の改行方法
+BreakBeforeBinaryOperators: NonAssignment # 演算子後に改行
+
+# 長い文字列を分割するか
+# "veryverylongtext"
+# これを
+# "veryvery"
+# "longtext"
+# こんな感じに
+BreakStringLiterals: false
+
+#################################################
+# lambda
+
+# 短いラムダ式を一行にまとめるか
+AllowShortLambdasOnASingleLine: None
+
+#################################################
+# binpack
+
+# falseだと引数が複数行の時に引数ごとに改行される
+BinPackArguments: false
+BinPackParameters: false
